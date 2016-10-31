@@ -1,0 +1,54 @@
+// Filename: _hero.scss
+// Date: 28 Aug 16
+// Programmer: Jaymes Young-Liebgott
+
+
+.hero-home {
+  position: relative;
+  
+  background: url('../img/g8tor-hero-test1.jpg') center / cover no-repeat #fff;
+  height: 200px;
+  margin-top: 85px;
+  
+  @media #{$brk-sm} {
+    height: 250px;
+    margin-top: 70px;
+  }
+  
+  @media #{$brk-md} {
+    height: 300px;
+  }
+  
+  @media #{$brk-lg} {
+    height: 350px;
+  }
+  
+  @media #{$brk-xl} {
+    height: 400px;
+  }
+  
+  &__text {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    
+    color: $white;
+    margin-bottom: 0;
+    text-shadow: 0px 1px 3px rgba(0, 0, 0, 1);
+    width: 100%;
+    
+    @media #{$brk-md} {
+      @include text(3em);
+    }
+    
+  }
+}
+
+.hero {
+  background: $concrete;
+  margin-top: 55px;
+  
+  &__wrap {
+    text-align: center;
+  }
+}

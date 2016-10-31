@@ -1,0 +1,39 @@
+// Filename: _layout.scss
+// Date: 31 Aug 16
+// Programmer: Jaymes Young-Liebgott
+
+.main-header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  
+  background: $header-footer-color;
+  height: 85px;
+  width: 100%;
+  
+  @media #{$brk-sm} {
+    height: 70px;
+  }
+}
+
+.main-footer {
+  background: $header-footer-color;
+  color: $white;
+  text-align: center;
+}
+
+.section-one {
+  background: $concrete;
+  color: $black;
+}
+
+.section-two {
+  background: $shark;
+  color: $white;
+}
+
+.section-three {
+  background: transparent;
+}
+

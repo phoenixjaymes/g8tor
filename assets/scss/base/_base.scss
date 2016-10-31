@@ -1,0 +1,28 @@
+// Filename: _base.scss
+// Date: 28 Aug 16
+// Programmer: Jaymes Young-Liebgott
+
+
+body {
+  background: $white;
+  font-fmaily: $font-family--primary;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+h1 {
+  @include text(2em);
+  font-family: $font-family--secondary;
+  text-align: center;
+  
+  
+}
+
+h2 {
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+  border-radius: 5px;
+}

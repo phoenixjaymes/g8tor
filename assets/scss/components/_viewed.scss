@@ -1,0 +1,75 @@
+/* 
+    File    : _viewed.scss
+    Date    : Sep 19, 2016, 12:09:12 PM
+    Author  : Phoenix
+*/
+
+.viewed {
+  text-align: center;
+  
+  @media #{$brk-md} {
+    text-align: left;
+  }
+  
+  &__figure {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 0 10px;
+    width: 200px;
+  }
+  
+  &__img {
+    border-radius: 5px;
+    cursor: pointer;
+    
+    
+  }
+  
+  &__caption {
+    text-align: left;
+  }
+}
+
+
+.viewed__figure:nth-child(n+3) {
+  display: none;
+}
+
+@media #{$brk-md} {
+  .viewed__figure:nth-child(n+3) {
+    display: inline-block;
+  }
+  
+  .viewed__figure:nth-child(n+4) {
+    display: none;
+  }
+}
+
+@media #{$brk-lg} {
+  .viewed__figure:nth-child(n+4) {
+    display: inline-block;
+  }
+  
+  .viewed__figure:nth-child(n+5) {
+    display: none;
+  }
+}
+
+@media #{$brk-xl} {
+  .viewed__figure:nth-child(n+5) {
+    display: inline-block;
+  }
+  
+  .viewed__figure:nth-child(n+6) {
+    display: none;
+  }
+}
+
+.subtotal {
+  border-bottom: 1px solid #555;
+  font-weight: bold;
+  
+  &__total {
+    color: red;
+  }
+}

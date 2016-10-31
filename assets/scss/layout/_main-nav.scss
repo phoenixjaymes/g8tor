@@ -1,0 +1,38 @@
+// Filename: _main-nav.scss
+// Date: 31 Aug 16
+// Programmer: Jaymes Young-Liebgott
+
+
+.main-nav {
+  
+  display: flex;
+  flex-wrap: wrap;
+  height: 85px;
+  margin: 0;
+  padding-top: 5px;
+  
+  @media #{$brk-sm} {
+    height: 70px;
+    flex-wrap: nowrap;
+  }
+  
+  &__menu {
+    flex-basis: 100%;
+    margin-left: auto;
+    
+    @media #{$brk-sm} {
+      flex-basis: auto;
+    }
+    
+  }
+  
+}
+
+
+.logo {
+  height: 45px;
+  
+  @media #{$brk-sm} {
+    height: 60px;
+  }
+}

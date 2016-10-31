@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!--
+File      : index.html
+Date      : 22 Aug 16
+Author    : Jaymes Young
+-->
+<html ng-app="g8tor">
+  <head>
+    <title>G8tor Tie-Down System</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/styles.min.css">
+  </head>
+  
+  <body ng-controller="Main">
+    <header class="main-header" ng-include=' "app/views/partials/main-nav.html" '></header>
+    
+    <main ng-view class="main-content m-b-0"></main>
+    
+    <footer class="main-footer" ng-include=' "app/views/partials/main-footer.html" '></footer>
+    
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="node_modules/angular-route/angular-route.min.js"></script>
+    
+    <script src="app/app.js"></script>    
+  </body>
+</html>

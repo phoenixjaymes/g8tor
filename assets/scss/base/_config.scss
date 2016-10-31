@@ -1,0 +1,58 @@
+// Filename: _config.scss
+// Date: 21 Jul 16
+// Programmer: Jaymes Young-Liebgott
+
+
+// ===============================
+// Global Config
+// ==============================
+
+// Font stacks
+$font-url--google           : 'https://fonts.googleapis.com/css?family=Bree+Serif|Open+Sans:400,600';
+$font-family--primary       : 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-family--secondary     : 'Bree Serif', 'Helvetica Neue', Helvetica, serif;
+
+
+// Font weights
+$font-weight--medium        : 400; 
+$font-weight--bold          : 600; 
+
+// http://paletton.com/#uid=61L0E0kqJPSeSVtleSxyWMrHKuB
+// Decriptive color variables
+
+$white                : #fff;
+$black                : #000;
+$shark                : #2b2d2f;
+$concrete             : #F3F3F3;
+$nevada               : #6C7071;
+$yellow               : #FFE800;
+
+
+// Functional color variables
+$header-footer-color  : $nevada;
+
+
+
+// Text
+$base__font-size      : 16px;
+$base__line           : 24px;
+
+// Path to assets
+$path-bg              : 'backgrounds/';
+$path-assets          : '../img/';
+
+
+// Misc variables
+$brd-radius           : 5px;
+
+// Small devices (landscape phones, 544px and up)
+$brk-sm: '(min-width: 544px)';
+
+// Medium devices (tablets, 768px and up)
+$brk-md: '(min-width: 768px)';
+
+// Large devices (desktops, 992px and up)
+$brk-lg: '(min-width: 992px)';
+
+// Extra large devices (large desktops, 1200px and up)
+$brk-xl: '(min-width: 1200px)';

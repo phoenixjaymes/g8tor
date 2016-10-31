@@ -1,0 +1,14 @@
+// Filename: _video.scss
+// Date: 28 Aug 16
+// Programmer: Jaymes Young-Liebgott
+
+.video {
+  background: $concrete;
+  text-align: center;
+  
+  &__wrap {
+    max-width: 560px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

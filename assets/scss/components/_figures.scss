@@ -1,0 +1,36 @@
+// Filename: _home-figures.scss
+// Date: 28 Aug 16
+// Programmer: Jaymes Young-Liebgott
+
+.home-fig {
+  text-align: center;
+  
+  &__img {
+    border-radius: 50%;
+    padding: 0 40px;
+  }
+  
+  &__caption {
+    text-align: left;
+  }
+}
+
+
+.shop-fig {
+  background: $white;
+  border: solid 1px #000;
+  border-radius: 5px;
+  padding: 0 40px;
+  text-align: center;
+  
+  &__img {
+    border-radius: 5px;
+    cursor: pointer;
+    
+    
+  }
+  
+  &__caption {
+    text-align: left;
+  }
+}

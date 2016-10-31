@@ -1,0 +1,39 @@
+// Filename: _main-menu.scss
+// Date: 31 Aug 16
+// Programmer: Jaymes Young-Liebgott
+
+.main-menu { 
+  list-style: none;
+  margin-top: 3px;
+  padding: 0;
+  text-align: center;
+  transition: top .5s ease-out;
+  width: 100%;
+  
+  @media #{$brk-sm} {
+    margin-top: 17px;
+    text-align: right;
+  }
+  
+  a {
+    font-weight: bold;
+    text-decoration: none;
+    
+    &:link, &:visited {
+      color: $white;
+    }
+    
+    &:hover, &:active
+    {
+      color: $yellow;
+    }
+    
+  }
+    
+  &__item {
+    display: inline-block;
+    padding: 0 10px;
+  }
+  
+}
+

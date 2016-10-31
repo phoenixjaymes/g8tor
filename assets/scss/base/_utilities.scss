@@ -1,0 +1,53 @@
+// Filename: _utilities.scss
+// Date: 20 Aug 16
+// Programmer: Jaymes Young-Liebgott
+
+// ====================
+// Utilities
+// ====================
+
+
+// Import if Google Fonts URL is defined
+@if variable-exists(font-url--google) {
+    @import url($font-url--google);
+}
+
+// Calculate em values
+@function em($target, $context: $base__font-size) {
+    @return ($target / $context) * 1em;
+}
+
+
+// Mixins
+
+// Text
+@mixin text($size: $base__font-size, $l-height: null, $weight: null, $color: null) {
+    font-size: $size;
+    line-height: $l-height;
+    font-weight: $weight;
+    color: $color;
+}
+
+// Fonts faces
+@mixin font-face($family, $file) {
+    @font-face {
+        font-family: $family;
+	src: url('#{$path-font}/#{$file}-webfont.eot');
+	src: url('#{$path-font}/#{$file}-webfont.eot?iefix') format('eot'),
+	     url('#{$path-font}/#{$file}-webfont.woff') format('woff'),
+	     url('#{$path-font}/#{$file}-webfont.ttf') format('truetype');
+    }
+}
+
+// Bem selectors
+@mixin e($element) {
+    &__#{$element} {
+        @content;
+    }
+}
+
+@mixin m($modifier) {
+    &--#{$modifier} {
+        @content;
+    }
+}

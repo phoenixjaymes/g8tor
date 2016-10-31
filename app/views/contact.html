@@ -1,0 +1,25 @@
+<!-- contact -->
+
+<img class="img-fluid  m-t-3 m-b-2 p-t-2" src="http://placehold.it/1000x182" alt="Beautiful Island">
+
+<h1 class="text-xs-center m-t-3 p-t-2">Keep in Touch</h1>
+
+<form action="#">
+  <p>Send us a message, we'd love to hear from you</p>
+  <label for="userName">Name</label>
+  <input type="email" class="form-control m-b-1" id="userName" placeholder="Enter name">
+
+  <label for="userEmail">Email</label>
+  <input type="email" class="form-control m-b-1" id="userEmail" placeholder="Enter email">
+
+  <label for="userState">State</label>
+  <select class="form-control" id="userState">
+    <option value="">State</option>
+    <option ng-repeat="state in myStates" value="{{ state.abbr }}">{{ state.name }}</option>
+  </select>
+
+  <label for="userComment">Comments</label>
+  <textarea class="form-control m-b-1" id="userComment" rows="3"></textarea>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

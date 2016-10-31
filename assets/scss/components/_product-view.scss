@@ -1,0 +1,20 @@
+/* 
+    File       : _product-view.scss
+    Created on : 02 Sep 16
+    Author     : Jaymes Young
+*/
+
+
+// Product view
+.product {
+  position: fixed;
+  left:  calc(50% - 150px);
+  top: calc(50% - 200px);
+  
+  background: $white;
+  border: 1px solid #000;
+  border-radius: 5px;
+  height: 400px;
+  width: 300px;
+  
+}

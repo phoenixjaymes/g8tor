@@ -1,0 +1,53 @@
+<!-- cart -->
+
+<section class="hero p-y-2" ng-include=' "app/views/partials/_hero.html" '></section>
+
+<section class="section-one p-y-2">
+  <h1>Shopping Cart</h1>
+  
+  <h2 class="m-t-2 m-b-3">{{ msg }}</h2>
+  
+  <div class="container">
+    <!-- Cart Item -->
+    <div class="cart-item m-b-1" ng-repeat="product in cart">
+
+      <img class="cart-item__img" ng-src="assets/img/{{ products[product.id].image }}" alt="{{ products[product.id].name }}">
+
+      <p class="cart-item__description">
+        <span class="cart-item__name">{{ products[product.id].name }}</span><br>
+        <span class="cart-item__in-stock">In Stock</span><br>
+        <span>Eligible for FREE Shipping</span><br>
+        <a href="" ng-click="deleteItem($index)">Delete</a>
+      </p>
+      
+      <div class="cart-item__price-wrap">
+        <span class="cart-item__price">${{ products[product.id].price }}</span>
+        <input class="cart-item__quantity" type="text" value="" maxlength="3" name="qnt"
+          id="qnt" ng-init="itemQty = product.qty" ng-model="itemQty" ng-change="qtyChange($index, itemQty)"><!-- on change update qty and price -->
+      </div>
+
+    </div><!-- end cart item -->
+
+  </div><!-- end container -->
+</section>
+
+<!-- Subtotal -->
+<section class="p-y-2">
+  <div class="container">
+    <p class="subtotal m-b-0 text-xs-right">Subtotal ({{ cartCount }} items): <span class="subtotal__total">${{ cartTotal }}</span></p>
+  </div>
+</section>
+
+<!-- Recently viewed items -->
+<section ng-class="{'p-y-2' : viewedCount}">
+  
+  <div class="container viewed">
+    <h3 ng-class="{'m-t-2 m-b-3' : viewedCount}">{{ msgViewed }}</h3>
+    <figure class="viewed__figure" ng-repeat="item in viewed">
+      <img class="viewed__img" ng-src="assets/img/{{ products[item.id].image }}" alt="{{ products[item.id].name }}">
+      <figcaption class="viewed__caption">{{ products[item.id].name }}<br>
+        ${{ products[item.id].price }}
+      </figcaption>
+    </figure>
+  </div>
+</section>

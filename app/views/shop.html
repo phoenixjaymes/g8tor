@@ -1,0 +1,35 @@
+<!-- shop -->
+
+<section class="hero p-y-2" ng-include=' "app/views/partials/_hero.html" '></section>
+
+<section class="section-one p-y-2">
+  <h1 class=" hero__text">G8TOR tie-down products</h1>
+ 
+  <div class="container">
+    <div class="row p-y-2">
+      <div ng-repeat=" product in products " class="col-sm-6 col-md-4 col-xl-3">
+        <figure class="p-y-1 shop-fig">
+          <img ng-click="showItemDetail($index); addViewed($index)" class="shop-fig__img" ng-src="assets/img/{{ product.image }}">
+          <figcaption>
+            <p>{{ product.name }}<br>
+            ${{ product.price }}</p>
+          </figcaption>
+          <button ng-click="addItem($index)" class="btn btn-sm btn-primary">Add to Cart</button>
+        </figure>
+      </div><!-- end col -->
+    </div><!-- end row -->
+  </div><!-- end container -->
+</section>
+
+<div class="product p-a-1" ng-show=" showProduct ">
+  <button ng-click="hideItemDetail()" type="button" class="close" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+  <br>
+  <h5>{{ productName }}</h5>
+  <br>
+  <img ng-src="assets/img/{{ productImg }}" alt="{{ productName }}">
+  <br>
+  ${{ productPrice }}
+  <br>
+</div>
